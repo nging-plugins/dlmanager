@@ -114,13 +114,13 @@ require (
 	github.com/webx-top/captcha v0.0.1 // indirect
 	github.com/webx-top/chardet v0.0.1 // indirect
 	github.com/webx-top/codec v0.1.1 // indirect
-	github.com/webx-top/db v1.18.3 // indirect
+	github.com/webx-top/db v1.18.4 // indirect
 	github.com/webx-top/image v0.0.9 // indirect
 	github.com/webx-top/pagination v0.1.1 // indirect
 	github.com/webx-top/poolx v0.0.0-20210912044716-5cfa2d58e380 // indirect
 	github.com/webx-top/tagfast v0.0.0-20161020041435-9a2065ce3dd2 // indirect
 	github.com/webx-top/validation v0.0.3 // indirect
-	golang.org/x/crypto v0.0.0-20211202192323-5770296d904e // indirect
+	golang.org/x/crypto v0.0.0-20211209193657-4570a0811e8b // indirect
 	golang.org/x/image v0.0.0-20211028202545-6944b10bf410 // indirect
 	golang.org/x/net v0.0.0-20211208012354-db4efeb81f4b // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
