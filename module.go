@@ -9,7 +9,6 @@ import (
 const ID = `download`
 
 var Module = module.Module{
-	Startup: ID,
 	TemplatePath: map[string]string{
 		ID: `dlmanager/template/backend`,
 	},
