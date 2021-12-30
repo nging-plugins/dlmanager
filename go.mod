@@ -9,7 +9,7 @@ require (
 	github.com/admpub/nging/v4 v4.0.0
 	github.com/webx-top/client v0.3.9
 	github.com/webx-top/com v0.3.5
-	github.com/webx-top/echo v2.23.7+incompatible
+	github.com/webx-top/echo v2.23.8+incompatible
 )
 
 require (
