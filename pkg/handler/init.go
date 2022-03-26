@@ -17,6 +17,7 @@ func RegisterRoute(r *route.Collection) {
 
 func registerRoute(g echo.RouteRegister) {
 	Server.Register(g, true)
+	Server.LoadSettings()
 	g.Route(`GET,POST`, `/file`, File, mw.CORS())
 }
 
@@ -30,5 +31,4 @@ var downloadDir = func() string {
 func init() {
 	Server.SetTmpl(`download/index`)
 	Server.SetSavePath(downloadDir)
-	Server.LoadSettings()
 }
