@@ -12,12 +12,12 @@ import (
 var Server = &service.DServ{}
 
 func RegisterRoute(r *route.Collection) {
+	Server.LoadSettings()
 	r.Backend.RegisterToGroup(`/download`, registerRoute)
 }
 
 func registerRoute(g echo.RouteRegister) {
 	Server.Register(g, true)
-	Server.LoadSettings()
 	g.Route(`GET,POST`, `/file`, File, mw.CORS())
 }
 
