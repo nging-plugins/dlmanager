@@ -35,7 +35,7 @@ require (
 	github.com/admpub/go-reuseport v0.0.4 // indirect
 	github.com/admpub/go-utility v0.0.1 // indirect
 	github.com/admpub/godotenv v1.4.2 // indirect
-	github.com/admpub/gohls v1.1.3 // indirect
+	github.com/admpub/gohls v1.2.1 // indirect
 	github.com/admpub/gohls-server v0.3.7 // indirect
 	github.com/admpub/humanize v0.0.0-20190501023926-5f826e92c8ca // indirect
 	github.com/admpub/i18n v0.0.3 // indirect
