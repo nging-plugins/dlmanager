@@ -5,7 +5,8 @@ go 1.17
 replace github.com/admpub/nging/v4 => ../../admpub/nging
 
 require (
-	github.com/admpub/godownloader v2.1.6+incompatible
+	github.com/admpub/godownloader v2.1.7+incompatible
+	github.com/admpub/log v1.3.2
 	github.com/admpub/nging/v4 v4.1.1
 	github.com/webx-top/client v0.6.7
 	github.com/webx-top/com v0.3.8
@@ -45,7 +46,6 @@ require (
 	github.com/admpub/ip2region v1.2.11 // indirect
 	github.com/admpub/json5 v0.0.1 // indirect
 	github.com/admpub/license_gen v0.1.0 // indirect
-	github.com/admpub/log v1.3.2 // indirect
 	github.com/admpub/mahonia v0.0.0-20151019004008-c528b747d92d // indirect
 	github.com/admpub/mail v0.0.0-20170408110349-d63147b0317b // indirect
 	github.com/admpub/marmot v0.0.0-20200702042226-2170d9ff59f5 // indirect
