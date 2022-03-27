@@ -5,7 +5,7 @@ go 1.17
 replace github.com/admpub/nging/v4 => ../../admpub/nging
 
 require (
-	github.com/admpub/godownloader v2.1.7+incompatible
+	github.com/admpub/godownloader v2.1.8+incompatible
 	github.com/admpub/log v1.3.2
 	github.com/admpub/nging/v4 v4.1.1
 	github.com/webx-top/client v0.6.7
@@ -36,7 +36,7 @@ require (
 	github.com/admpub/go-reuseport v0.0.4 // indirect
 	github.com/admpub/go-utility v0.0.1 // indirect
 	github.com/admpub/godotenv v1.4.2 // indirect
-	github.com/admpub/gohls v1.2.2 // indirect
+	github.com/admpub/gohls v1.2.3 // indirect
 	github.com/admpub/gohls-server v0.3.7 // indirect
 	github.com/admpub/humanize v0.0.0-20190501023926-5f826e92c8ca // indirect
 	github.com/admpub/i18n v0.0.3 // indirect
