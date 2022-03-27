@@ -5,7 +5,7 @@ go 1.17
 replace github.com/admpub/nging/v4 => ../../admpub/nging
 
 require (
-	github.com/admpub/godownloader v2.1.8+incompatible
+	github.com/admpub/godownloader v2.1.9+incompatible
 	github.com/admpub/log v1.3.2
 	github.com/admpub/nging/v4 v4.1.1
 	github.com/webx-top/client v0.6.7
