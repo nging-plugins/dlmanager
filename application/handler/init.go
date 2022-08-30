@@ -8,7 +8,7 @@ import (
 
 	"github.com/admpub/nging/v4/application/library/config/startup"
 	"github.com/admpub/nging/v4/application/library/route"
-	dlconfig "github.com/nging-plugins/dlmanager/pkg/library/config"
+	dlconfig "github.com/nging-plugins/dlmanager/application/library/config"
 )
 
 var Server = &service.DServ{}
