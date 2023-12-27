@@ -8,11 +8,9 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="block-flat no-padding">
-			<div class="header">							
-				<h3>{{"离线下载"|$.T}}</h3>
-			</div>
-			<div class="content">
-				
+			<div class="header clearfix">
+				<h3 class="pull-left">{{"离线下载"|$.T}}</h3>
+				<div class="pull-left sm-margin-left">
 					<div class="btn-group">
 					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 						{{"Task"|$.T}} <span class="caret"></span>
@@ -47,6 +45,9 @@
 							</li>
 					  </ul>
 					</div>
+				</div><!-- /.pull-left -->
+			</div>
+			<div class="content">
 				<div class="table-responsive">
 				<table class="table no-border hover" id="fileTable">
 					<thead class="no-border">
