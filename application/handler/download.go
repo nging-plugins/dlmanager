@@ -27,13 +27,14 @@ import (
 	"github.com/webx-top/com"
 	"github.com/webx-top/echo"
 
-	"github.com/admpub/nging/v5/application/handler"
-	"github.com/admpub/nging/v5/application/library/config"
-	"github.com/admpub/nging/v5/application/library/filemanager"
-	"github.com/admpub/nging/v5/application/library/notice"
-	"github.com/admpub/nging/v5/application/library/respond"
+	"github.com/coscms/webcore/library/backend"
+	"github.com/coscms/webcore/library/common"
+	"github.com/coscms/webcore/library/config"
+	"github.com/coscms/webcore/library/filemanager"
+	"github.com/coscms/webcore/library/notice"
+	"github.com/coscms/webcore/library/respond"
 
-	uploadChunk "github.com/admpub/nging/v5/application/registry/upload/chunk"
+	uploadChunk "github.com/coscms/webcore/registry/upload/chunk"
 	uploadClient "github.com/webx-top/client/upload"
 	uploadDropzone "github.com/webx-top/client/upload/driver/dropzone"
 )
@@ -51,7 +52,7 @@ func File(ctx echo.Context) error {
 		absPath = filepath.Join(root, filePath)
 	}
 
-	user := handler.User(ctx)
+	user := backend.User(ctx)
 	switch do {
 	case `edit`:
 		data := ctx.Data()
@@ -103,7 +104,7 @@ func File(ctx echo.Context) error {
 			absPath = filepath.Join(root, filePath)
 			err = mgr.Remove(absPath)
 			if err != nil {
-				handler.SendFail(ctx, err.Error())
+				common.SendFail(ctx, err.Error())
 				return ctx.Redirect(next)
 			}
 		}
@@ -117,7 +118,7 @@ func File(ctx echo.Context) error {
 		}
 		err = mgr.Upload(absPath, cu, opts...)
 		if err != nil {
-			user := handler.User(ctx)
+			user := backend.User(ctx)
 			if user != nil {
 				notice.OpenMessage(user.Username, `upload`)
 				notice.Send(user.Username, notice.NewMessageWithValue(`upload`, ctx.T(`文件上传出错`), err.Error()))
@@ -139,7 +140,7 @@ func File(ctx echo.Context) error {
 	pathSlice := strings.Split(strings.Trim(filePath, echo.FilePathSeparator), echo.FilePathSeparator)
 	pathLinks := make(echo.KVList, len(pathSlice))
 	encodedSep := filemanager.EncodedSepa
-	urlPrefix := handler.URLFor(`/download/file?path=` + encodedSep)
+	urlPrefix := backend.URLFor(`/download/file?path=` + encodedSep)
 	for k, v := range pathSlice {
 		urlPrefix += com.URLEncode(v)
 		pathLinks[k] = &echo.KV{K: v, V: urlPrefix}

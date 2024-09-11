@@ -6,8 +6,8 @@ import (
 	"github.com/webx-top/echo"
 	mw "github.com/webx-top/echo/middleware"
 
-	"github.com/admpub/nging/v5/application/library/config/startup"
-	"github.com/admpub/nging/v5/application/library/route"
+	"github.com/coscms/webcore/library/config/startup"
+	"github.com/coscms/webcore/library/route"
 	dlconfig "github.com/nging-plugins/dlmanager/application/library/config"
 )
 

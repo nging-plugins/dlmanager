@@ -1,7 +1,7 @@
 package dlmanager
 
 import (
-	"github.com/admpub/nging/v5/application/library/module"
+	"github.com/coscms/webcore/library/module"
 
 	"github.com/nging-plugins/dlmanager/application/handler"
 )
