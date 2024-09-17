@@ -204,7 +204,9 @@ function checkedIds(){
     return ids;
 }
 function uncheckedIds(){
-    $('#fileTable .idCheck:checked').prop('checked',false);
+    var t=$('#fileTable');
+    t.find('.idCheck:checked').prop('checked',false);
+    t.find('.allCheck:checked').prop('checked',false);
 }
 function RemoveDownload() {
     var req = {id:checkedIds()};
