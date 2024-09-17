@@ -210,6 +210,7 @@ function uncheckedIds(){
 }
 function RemoveDownload() {
     var req = {id:checkedIds()};
+    if(req.id.length<1) return App.message({text:App.t('请选择要删除的下载任务'),type:'warn'});
     reqForm("/remove_task",req,function(){
         for(var i=0;i<req.id.length;i++){
             $('#id-'+req.id[i]).parent('tr').remove();
@@ -218,14 +219,17 @@ function RemoveDownload() {
 }
 function StartDownload() {
     var req = {id:checkedIds()};
+    if(req.id.length<1) return App.message({text:App.t('请选择要开始的下载任务'),type:'warn'});
     reqForm("/start_task",req,uncheckedIds);
 }
 function RestartDownload() {
     var req = {id:checkedIds()};
+    if(req.id.length<1) return App.message({text:App.t('请选择要重新开始的下载任务'),type:'warn'});
     reqForm("/restart_task",req,uncheckedIds);
 }
 function StopDownload() {
     var req = {id:checkedIds()};
+    if(req.id.length<1) return App.message({text:App.t('请选择要停止的下载任务'),type:'warn'});
     reqForm("/stop_task",req,uncheckedIds);
 }
 function StartAllDownload() {
