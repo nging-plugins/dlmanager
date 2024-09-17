@@ -152,13 +152,4 @@ var pipes={{$.Stored.pipes|JSONEncode|ToJS}};
 </script>
 <script type="text/javascript" src="{{AssetsURL}}/js/sockjs.min.js"></script>
 <script type="text/javascript" src="{{AssetsURL}}/dlmanager/js/download.min.js"></script>
-<script type="text/javascript">
-{{if $.Form "_pjax"}}
-App.loading('hide');
-sockJSRead();
-{{end}}
-$(function(){
-App.searchFS('#save_path_id',20);
-});
-</script>
 {{/Block}}

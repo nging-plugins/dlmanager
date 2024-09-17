@@ -265,7 +265,9 @@ function loading(close){
 }
 
 $(function(){
+    App.loading('hide');
     sockJSRead();
+    App.searchFS('#save_path_id',20);
     $('body').on('click','#fileTable .allCheck',function(){
         $('#fileTable .idCheck').prop('checked',$(this).prop('checked'));
     });
