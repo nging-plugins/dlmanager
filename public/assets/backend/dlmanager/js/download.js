@@ -272,13 +272,13 @@ $(function(){
         $('#fileTable .idCheck').prop('checked',$(this).prop('checked'));
     });
     OnChangeUrl();
-    $('#url_id').off().on('change',OnChangeUrl)
-    $('#dlctrl-remove').off().on('click',RemoveDownload);
-    $('#dlctrl-start').off().on('click',StartDownload);
-    $('#dlctrl-stop').off().on('click',StopDownload);
-    $('#dlctrl-restart').off().on('click',RestartDownload);
-    $('#dlctrl-start-all').off().on('click',StartAllDownload);
-    $('#dlctrl-stop-all').off().on('click',StopAllDownload);
-    $('#dlctrl-add').off().on('click',AddDownload);
+    $('#url_id').on('change',OnChangeUrl)
+    $('#dlctrl-remove').on('click',RemoveDownload);
+    $('#dlctrl-start').on('click',StartDownload);
+    $('#dlctrl-stop').on('click',StopDownload);
+    $('#dlctrl-restart').on('click',RestartDownload);
+    $('#dlctrl-start-all').on('click',StartAllDownload);
+    $('#dlctrl-stop-all').on('click',StopAllDownload);
+    $('#dlctrl-add').on('click',AddDownload);
 });
 })()
