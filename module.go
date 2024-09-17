@@ -12,7 +12,7 @@ var Module = module.Module{
 	TemplatePath: map[string]string{
 		ID: `dlmanager/template/backend`,
 	},
-	AssetsPath:  []string{},
+	AssetsPath:  []string{`dlmanager/assets/backend`},
 	Navigate:    RegisterNavigate,
 	Route:       handler.RegisterRoute,
 	DBSchemaVer: 0.0000,

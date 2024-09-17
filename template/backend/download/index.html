@@ -19,7 +19,7 @@
 						<li>
 							<a href="javascript:;" data-toggle="modal" data-target="#myModal">{{"Add download"|$.T}}</a>
 						</li>
-						<li onclick="RemoveDownload()">
+						<li id="dlctrl-remove">
 							<a href="javascript:;">{{"Delete download"|$.T}}</a>
 						</li>
 					  </ul>
@@ -30,17 +30,21 @@
 						{{"Action"|$.T}} <span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" role="menu">
-							<li onclick="StartDownload()">
+							<li id="dlctrl-start">
 								<a href="javascript:;">{{"Start"|$.T}}</a>
 							</li>
-							<li onclick="StopDownload()">
+							<li id="dlctrl-stop">
 								<a href="javascript:;">{{"Stop"|$.T}}</a>
 							</li>
 							<li class="divider"></li>
-							<li onclick="StartAllDownload()">
+							<li id="dlctrl-restart">
+								<a href="javascript:;">{{"重新下载"|$.T}}</a>
+							</li>
+							<li class="divider"></li>
+							<li id="dlctrl-start-all">
 								<a href="javascript:;">{{"Start all"|$.T}}</a>
 							</li>
-							<li onclick="StopAllDownload()">
+							<li id="dlctrl-stop-all">
 								<a href="javascript:;">{{"Stop all"|$.T}}</a>
 							</li>
 					  </ul>
@@ -93,7 +97,7 @@
 </tr>
 </script>
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="≈" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">
@@ -105,7 +109,7 @@
 				<div class="form-group">
 					<label class="control-label sm-margin-top">{{"Url"|$.T}}:</label>
 					<div class="controls">
-						<input type="text" onchange="OnChangeUrl()" id="url_id" class="form-control" value="https://sciter.com/sdk/sciter-sdk.zip">
+						<input type="text" id="url_id" class="form-control" value="https://sciter.com/sdk/sciter-sdk.zip">
 					</div>
 					<label class="control-label sm-margin-top">{{"Save path"|$.T}}:</label>
 					<div class="controls">
@@ -126,7 +130,11 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<a class="btn btn-primary" onclick="AddDownload()" data-dismiss="modal">
+				<div class="checkbox checkbox-success no-margin">
+					<input id="dlopt-download-now" class="styled idCheck" type="checkbox" value="1" />
+					<label for="dlopt-download-now">{{`立即下载`|$.T}}</label>
+				</div>
+				<a class="btn btn-primary" id="dlctrl-add" data-dismiss="modal">
 					<i class="glyphicon glyphicon-plus"></i>
 					{{"Add"|$.T}}
 				</a>
@@ -143,7 +151,7 @@ var states={Completed:'{{"Completed"|$.T}}',Running:'{{"Running"|$.T}}',Stopped:
 var pipes={{$.Stored.pipes|JSONEncode|ToJS}};
 </script>
 <script type="text/javascript" src="{{AssetsURL}}/js/sockjs.min.js"></script>
-<script type="text/javascript" src="{{AssetsURL}}/js/behaviour/download.min.js"></script>
+<script type="text/javascript" src="{{AssetsURL}}/dlmanager/js/download.min.js"></script>
 <script type="text/javascript">
 {{if $.Form "_pjax"}}
 App.loading('hide');
