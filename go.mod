@@ -1,11 +1,9 @@
 module github.com/nging-plugins/dlmanager
 
-go 1.23
-
-toolchain go1.23.0
+go 1.22.0
 
 require (
-	github.com/admpub/godownloader v2.2.0+incompatible
+	github.com/admpub/godownloader v2.2.2-0.20240917055040-ac8dad805dee+incompatible
 	github.com/admpub/log v1.3.6
 	github.com/coscms/webcore v0.0.0-20240911085259-de03337d48e1
 	github.com/webx-top/client v0.9.4
