@@ -2,13 +2,15 @@ module github.com/nging-plugins/dlmanager
 
 go 1.22.0
 
+// replace github.com/coscms/webcore => ../../coscms/webcore
+
 require (
 	github.com/admpub/godownloader v2.2.2+incompatible
 	github.com/admpub/log v1.3.6
 	github.com/coscms/webcore v0.1.6
-	github.com/webx-top/client v0.9.4
-	github.com/webx-top/com v1.3.2
-	github.com/webx-top/echo v1.9.11
+	github.com/webx-top/client v0.9.5
+	github.com/webx-top/com v1.3.3
+	github.com/webx-top/echo v1.10.3
 )
 
 require (
@@ -115,7 +117,7 @@ require (
 	github.com/onsi/gomega v1.34.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55 // indirect
-	github.com/prometheus/client_golang v1.20.3 // indirect
+	github.com/prometheus/client_golang v1.20.4 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.59.1 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
