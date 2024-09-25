@@ -45,6 +45,11 @@ var LeftNavigate = &navigate.Item{
 		},
 		{
 			Display: false,
+			Name:    `重启任务`,
+			Action:  `restart_task`,
+		},
+		{
+			Display: false,
 			Name:    `启动所有任务`,
 			Action:  `start_all_task`,
 		},
