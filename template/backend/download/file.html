@@ -1,4 +1,4 @@
-{{Extend "layout"}}
+{{Strip}}{{Extend "layout"}}
 
 {{Block "title"}}{{"离线下载"|$.T}} - {{"文件管理"|$.T}}{{/Block}}
 {{Block "breadcrumb"}}
@@ -165,3 +165,4 @@ function initDropzone(options) {
 </script>
 <script type="text/javascript" src="{{AssetsURL}}/js/behaviour/page/file.min.js?t={{BuildTime}}"></script>
 {{/Block}}
+{{/Strip}}

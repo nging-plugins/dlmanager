@@ -1,4 +1,4 @@
-{{Extend "layout"}}
+{{Strip}}{{Extend "layout"}}
 {{Block "title"}}{{"离线下载"|$.T}}{{/Block}}
 {{Block "breadcrumb"}}
 {{Super}}
@@ -98,8 +98,7 @@
 </script>
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
+	<div class="modal-dialog"><!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -153,3 +152,4 @@ var pipes={{$.Stored.pipes|JSONEncode|ToJS}};
 <script type="text/javascript" src="{{AssetsURL}}/js/sockjs.min.js"></script>
 <script type="text/javascript" src="{{AssetsURL}}/dlmanager/js/download.min.js"></script>
 {{/Block}}
+{{/Strip}}
