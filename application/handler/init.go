@@ -8,6 +8,7 @@ import (
 
 	"github.com/coscms/webcore/library/config/startup"
 	"github.com/coscms/webcore/library/module"
+	"github.com/coscms/webcore/library/role"
 	dlconfig "github.com/nging-plugins/dlmanager/application/library/config"
 )
 
@@ -40,4 +41,8 @@ func init() {
 	})
 	Server.SetTmpl(`download/index`)
 	Server.SetSavePath(downloadDir)
+	role.RegisterAuthDependency(
+		`user/autocomplete_path`,
+		`download/index.html`,
+	)
 }
